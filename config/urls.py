@@ -24,6 +24,7 @@ urlpatterns = [
         include("mysite.users.urls", namespace="users"),
     ),
     path("accounts/", include("allauth.urls")),
+    path("cheeses/", include("mysite.cheeses.urls", namespace="cheeses"))
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
